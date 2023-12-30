@@ -41,7 +41,11 @@ jobs:
           vcvarsall: ${{ contains(matrix.os, 'windows') }}
           cmake: true
           ninja: true
-          vcpkg: true
+          vcpkg: false
+      - if: matrix.os == 'ubuntu-latest'
+        run: |
+          apt update
+          apt install libxrandr-dev
       - name: Build
         run: |
           mkdir build
