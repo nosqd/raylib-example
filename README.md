@@ -15,9 +15,9 @@ $ cmake --build .
 Just use Clion™️
 
 # Libraries
-- [ocornut/imgui](https://github.com/ocornut/imgui) - current using `docking` branch (from 12/29/2023)
-- [raysan5/raylib](https://github.com/raysan5/raylib) - current using 5.0 version
-- [raylib-extras/rlImgui](https://github.com/raylib-extras/rlImgui) - current using `master` branch (from 12/29/2023)
+- [ocornut/imgui](https://github.com/ocornut/imgui) - currently using `docking` branch (from 12/29/2023)
+- [raysan5/raylib](https://github.com/raysan5/raylib) - currently using 5.0 version
+- [raylib-extras/rlImgui](https://github.com/raylib-extras/rlImgui) - currently using `master` branch (from 12/29/2023)
 
 # License
 - [rlImgui - zlib](https://raw.githubusercontent.com/raylib-extras/rlImGui/main/LICENSE)
