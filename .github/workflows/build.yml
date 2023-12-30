@@ -11,7 +11,6 @@ jobs:
       matrix:
         os:
           - windows-2022
-          - ubuntu-22.04
           - macos-12
         compiler:
           - clang
@@ -42,10 +41,6 @@ jobs:
           cmake: true
           ninja: true
           vcpkg: false
-      - if: matrix.os == 'ubuntu-latest'
-        run: |
-          apt update
-          apt install libxrandr-dev
       - name: Build
         run: |
           mkdir build
