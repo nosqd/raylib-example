@@ -47,12 +47,11 @@ jobs:
           clangtidy: true
 
       - name: Build
-        run:
-          - |
-            mkdir build
-            cd build
-            cmake ..
-            cmake --build .
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build .
       - uses: actions/upload-artifact@v4
         with:
           name: artifact
