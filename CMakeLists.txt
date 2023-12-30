@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.27)
-project(base_raylib_game_project CXX)
+project(raylib-example CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -21,6 +21,8 @@ if (NOT raylib_FOUND)
     endif()
 endif()
 
+set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
+set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib )
 
 include_directories(./ext/imgui)
 include_directories(./ext/rlImgui)
@@ -31,6 +33,5 @@ file(GLOB RLIMGUI_FILES ./ext/rlImgui/*.h ./ext/rlImgui/*.cpp)
 file(GLOB SRC_FILES ./src/*.cpp ./src/**/*.cpp)
 file(GLOB INC_FILES ./src/*.h ./src/**/*.h)
 
-file(COPY ${STEAM_SHIT} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-add_executable(base_raylib_game_project ${IMGUI_FILES} ${RLIMGUI_FILES} ${SRC_FILES} ${INC_FILES})
-target_link_libraries(base_raylib_game_project raylib)
+add_executable(raylib-example ${IMGUI_FILES} ${RLIMGUI_FILES} ${SRC_FILES} ${INC_FILES})
+target_link_libraries(raylib-example raylib)
